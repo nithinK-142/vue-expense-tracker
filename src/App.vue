@@ -70,7 +70,7 @@ const handleTransactionDeletion = (id) => {
 
   saveTransactionsToLocalStorage();
 
-  toast.success("Transaction added.");
+  toast.success("Transaction deleted.");
 };
 
 const generateUniqueId = () => {
@@ -80,25 +80,4 @@ const generateUniqueId = () => {
 const saveTransactionsToLocalStorage = () => {
   localStorage.setItem("transactions", JSON.stringify(transactions.value));
 };
-
-// const income = computed(() => {
-//   return transactions.value
-//     .filter((transactions) => transactions.amount > 0)
-//     .reduce((acc, transaction) => {
-//       return acc + transaction.amount;
-//     }, 0)
-//     .toFixed(2);
-// });
-
-// const expenses = computed(() => {
-//   return transactions.value
-//     .filter((transactions) => transactions.amount < 0)
-//     .reduce((acc, transaction) => {
-//       return acc + Math.abs(transaction.amount);
-//     }, 0)
-//     .toFixed(2);
-// });
-
-// console.log(income.value);
-// console.log(expenses.value);
 </script>
